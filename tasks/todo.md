@@ -16,6 +16,18 @@
 
 ---
 
+# 当前任务：发布到 GitHub Pages
+
+- [x] 检查现有构建产物与 GitHub Pages 兼容性
+- [x] 配置静态站点构建及 Pages Actions 工作流
+- [x] 运行测试与生产构建并检查产物
+- [ ] 提交、推送并验证 Pages 部署
+
+## Review
+
+- 已新增独立的 Vite 静态入口与 GitHub Pages Actions 工作流，不改变现有 vinext/Cloudflare 构建。
+- 9 项测试、TypeScript、ESLint 与 Pages 生产构建均通过；产物已验证使用仓库子路径。
+
 # 当前任务：3D 爆炸图交互网页 MVP
 
 ## 规格
