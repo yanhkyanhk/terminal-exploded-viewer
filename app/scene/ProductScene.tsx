@@ -192,12 +192,12 @@ export function ProductScene({ controller }: SceneProps) {
 
   return (
     <>
-      <color attach="background" args={["#0b0f14"]} />
-      <fog attach="fog" args={["#0b0f14", 12, 27]} />
-      <ambientLight intensity={0.72} />
-      <hemisphereLight args={["#dff8ff", "#091017", 0.95]} />
+      <color attach="background" args={["#ffffff"]} />
+      <fog attach="fog" args={["#ffffff", 12, 27]} />
+      <ambientLight intensity={0.92} />
+      <hemisphereLight args={["#ffffff", "#dbe8ec", 1.1]} />
       <directionalLight position={[7, 9, 6]} intensity={2.5} color="#e8fbff" />
-      <pointLight position={[-6, 1, 4]} intensity={15} distance={14} color="#20d9ff" />
+      <pointLight position={[-6, 1, 4]} intensity={10} distance={14} color="#20d9ff" />
       <group rotation={[0.08, -0.28, -0.035]}>
         {product.modules.map((module) => <ModuleObject key={module.id} module={module} controller={controller} />)}
         <mesh position={[0, -3.2, 0]} rotation={[Math.PI / 2, 0, 0]}>
@@ -205,8 +205,8 @@ export function ProductScene({ controller }: SceneProps) {
           <meshBasicMaterial color={ringColor} transparent opacity={0.55} />
         </mesh>
       </group>
-      <Grid position={[0, -3.25, 0]} args={[24, 24]} cellSize={0.65} cellThickness={0.32} cellColor="#24404c" sectionSize={3.25} sectionThickness={0.55} sectionColor="#315867" fadeDistance={18} fadeStrength={1.4} infiniteGrid />
-      <ContactShadows position={[0, -3.18, 0]} opacity={0.38} scale={14} blur={2.8} far={8} />
+      <Grid position={[0, -3.25, 0]} args={[24, 24]} cellSize={0.65} cellThickness={0.32} cellColor="#d8e3e8" sectionSize={3.25} sectionThickness={0.55} sectionColor="#b9cbd3" fadeDistance={18} fadeStrength={1.4} infiniteGrid />
+      <ContactShadows position={[0, -3.18, 0]} opacity={0.22} scale={14} blur={2.8} far={8} />
       <CameraRig />
     </>
   );
